@@ -36,8 +36,22 @@ h1 {
     color:white;
 }
 
-#donut{
+#wrapper {
+    position:relative;
+    width:800px;
+    height:800px;
+}
+
+#donut-top, #donut-bottom { position:absolute; 
+    top:0px; 
+    left:0px;
+    width:300px;
+    height:200px;
+}
+
+#donut-top{
     
+
 }
 
 .rate-us {
