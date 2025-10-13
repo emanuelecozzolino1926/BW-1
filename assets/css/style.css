@@ -1,0 +1,23 @@
+/* GLOBALI */
+body{
+    background-image: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo {
+    height: 35px;
+}
+/* FORM */
+
+.header-cont-form{
+    padding: 50px;
+    width: 80%;
+    margin: auto;
+}
+.timer{
+    display: inline-block;
+    text-align: right;
+    color: white;
+    margin-left: 90%;
+}
