@@ -20,10 +20,18 @@ h2 {
     font-size: 1.5em;
 }
 
+h3{
+    font-size: 1.25em;
+}
+
 .results {
     text-align: center;
     color:white;
     margin-bottom: 1rem;
+}
+
+#graph {
+    width:100%;
 }
 
 .wright-perc, .wrong-perc {
@@ -34,21 +42,22 @@ h2 {
 }
 
 .wright-perc{
+    float: left;
     text-align: left;
     font-size: 2em;
     width: 30vw;
     margin-left: 1rem;
-    margin-right: 16vw;
+    margin-right: auto;
     
 }
 
 .wrong-perc{
+    float: right;
     text-align: right;
     font-size: 2em;
     width: 30vw;
     margin-right: 1rem;
-    margin-left: 16vw;
-    justify-self: right;
+    margin-left: auto;
 }
 
 #in-cirlce-text{
@@ -56,8 +65,6 @@ h2 {
     text-align: center;
     width: 30vw;
     margin-top: 10rem;
-    /* display: inline-block; */
-    position:relative;
     margin-left: auto;
     margin-right: auto;
 }
@@ -78,12 +85,9 @@ width: 20vw;
 #donut{ 
     display: inline-block;
     position:absolute; 
-    top: 200px; 
+    top: 130px; 
 }
 
-#graph {
-    
-}
 
 
 .rate-us {
