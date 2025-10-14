@@ -7,31 +7,8 @@ body{
 
 .logo {
     height: 35px;
-}
-/* FORM */
-
-.header-cont-form{
-    padding: 50px;
-    width: 80%;
-    margin: auto;
-}
-.timer-cont{
-    display: inline-block;
-    text-align: right;
-    color: white;
-    margin-left: 80%;
-}
-.quiz{
-    color: white;
-    width: 50%;
-    margin: auto;
-    margin-top: 70px;
-}
-
-.answer-title{
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 75px;
+    margin-top: 2rem;
+    margin-left: 10vw;
 }
 
 /* RESULTS*/
@@ -44,23 +21,49 @@ h1 {
     color:white;
 }
 
+.wright-perc, .wrong-perc {
+    display: inline-block; 
+    width: 60%;
+    position: relative; 
+    color: white;  
+}
+
+.wright-perc{
+    margin-right: 1rem;
+}
+
+.wrong-perc{
+    margin-left: 1rem;
+}
+
+.in-circle-text{
+    display: inline-block;
+    top: 100px;
+    position:relative;
+    margin: 1em, 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #wrapper {
     position:relative;
-    width:800px;
-    height:800px;
+    width:400px;
+    height:400px;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#donut-top, #donut-bottom { position:absolute; 
+
+#donut-top, #donut-bottom { 
+    display: inline-block;
+    position:absolute; 
     top:0px; 
     left:0px;
-    width:300px;
-    height:200px;
+    width:600px;
+    height:400px;
 }
 
-#donut-top{
-    
-
-}
 
 .rate-us {
     margin: 2rem, 100%;
@@ -72,6 +75,7 @@ h1 {
 
 .rate-us button {
     padding: 1rem;
+    margin-top: 4rem;
     width: 160px;
     margin-left: auto;
     margin-right: auto;

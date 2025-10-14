@@ -23,15 +23,32 @@
         <p>The summary of your answers:</p>
       </div>
     </header>
-    <main><section>
-      <div class="wright-perc"><p>Correct</p></div>
-      <div id="wrapper"> 
-        <canvas id="donut-bottom" width="600px" height="300px"></canvas>
-        <canvas id="donut-top" width="600px" height="300px"></canvas>
+    <main>
+      <section id="graph">
+      <div class="wright-perc">
+        <p>Correct</p>
       </div>
-      <div class="wrong-perc">Wrong</div>
-    </section></main>
+      <div id="wrapper"> 
+        <canvas id="donut-bottom" style="width: 100%; max-width: 400px;">il mio testo</canvas>
+        <canvas id="donut-top" style="width: 100%; max-width: 400px;"></canvas>
+        <div class="in-cirlce-text" style="color: white;">
+          <p>Congratulation! You passed the exam.</p>
+          <p>we'll send you the certificate in few minutes. Check your email(including promotions/spam folder)</p>
+        </div>
+      </div>
+      <div class="wrong-perc">
+        Wrong
+      </div>
+    </section>
+  </main>
     <footer><div class="rate-us"><button>RATE US</button></div></footer>
+
+    <!--SCRIPTS-->
+   
+    <!--CHART.JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.0/chart.umd.js" integrity="sha512-D4pL3vNgjkHR/qq+nZywuS6Hg1gwR+UzrdBW6Yg8l26revKyQHMgPq9CLJ2+HHalepS+NuGw1ayCCsGXu9JCXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!--CUSTOM SCRIPT-->
     <script src="./assets/scripts/script.js"></script>
   </body>
 </html>
