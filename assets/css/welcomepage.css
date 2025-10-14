@@ -1,30 +1,22 @@
-header {
-  position: absolute;
-  top: 30px;
-  left: 40px;
-}
-
-/* === GLOBAL === */
 body {
-  margin: 0;
   font-family: "Inter", sans-serif;
   background: linear-gradient(135deg, #0b0b3b, #5b0a7e);
   color: white;
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: flex-start;
+  padding-left: 80px;
+  font-size: large;
 }
 
-/* === WRAPPER CENTRA TUTTO === */
-.wrapper {
-  width: 100%;
-  max-width: 900px;
-  padding: 40px;
-  box-sizing: border-box;
+/* === HEADER LOGO === */
+header {
+  position: absolute;
+  top: 30px;
+  left: 40px;
 }
 
-/* === LOGO === */
 .logo {
   display: block;
   margin: 0 auto 60px auto;
@@ -33,14 +25,14 @@ body {
 
 /* === HEADINGS === */
 h1 {
-  font-size: 4rem;
+  font-size: 6rem;
   margin-bottom: 1.5rem;
   font-weight: 700;
   color: white;
 }
 
 h1 span {
-  color: #d2d2f7;
+  color: #eaeaf1;
 }
 
 h2 {
@@ -61,13 +53,21 @@ p {
 ul {
   padding-left: 20px;
   margin-bottom: 2rem;
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 ul li {
   margin-bottom: 0.8rem;
+  opacity: 75%;
 }
 
+ul li strong {
+  font-weight: 700;
+}
+
+li span {
+  color: #eaeaf1;
+}
 /* === CHECKBOX === */
 .checkbox {
   display: flex;
@@ -77,10 +77,14 @@ ul li {
   margin-bottom: 2rem;
 }
 
+.checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: white;
+}
+
 /* === BUTTON === */
 .proceed-btn {
-  display: block;
-  margin: 0 auto;
   background-color: #00f0ff;
   color: #000;
   font-size: 1.2rem;
@@ -91,6 +95,7 @@ ul li {
   box-shadow: 0 0 15px #00f0ff;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-right: auto;
 }
 
 .proceed-btn:hover {
