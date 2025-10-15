@@ -1,0 +1,111 @@
+/* GLOBALI */
+body{
+    background-image: url("../images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo {
+    height: 35px;
+    margin-top: 2rem;
+    margin-left: 10vw;
+}
+
+/* RESULTS*/
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3{
+    font-size: 1.25em;
+}
+
+.results {
+    text-align: center;
+    color:white;
+    margin-bottom: 1rem;
+}
+
+#graph {
+    width:100%;
+}
+
+.wright-perc, .wrong-perc {
+    display: inline-block; 
+    width: 30%;
+    position: relative; 
+    color: white;  
+}
+
+.wright-perc{
+    float: left;
+    text-align: left;
+    font-size: 2em;
+    width: 30vw;
+    margin-left: 1rem;
+    margin-right: auto;
+    
+}
+
+.wrong-perc{
+    float: right;
+    text-align: right;
+    font-size: 2em;
+    width: 30vw;
+    margin-right: 1rem;
+    margin-left: auto;
+}
+
+#in-cirlce-text{
+    color: white;
+    text-align: center;
+    width: 30vw;
+    margin-top: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#in-circle-text p{
+width: 20vw;
+}
+
+#wrapper {
+    /* position:relative; */
+    width:400px;
+    height:400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#donut{ 
+    display: inline-block;
+    position:absolute; 
+    top: 130px; 
+}
+
+
+
+.rate-us {
+    margin: 2rem, 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.rate-us button {
+    padding: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    background: none;
+    color: white;
+    border-color: white;
+}
