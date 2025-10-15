@@ -23,7 +23,7 @@ let stelle = document.querySelectorAll(".stella")
 stelle.forEach(function (stella) {
   stella.addEventListener("click", function (e) {
     for (let i = 0; i < stelle.length; i++) {
-      stelle[i].src = "./assets/img/star_dark.svg"
+      stelle[i].src = "./assets/images/star_dark.svg"
     }
 
     // questa funzione di SOPRA (il for each) ha controllato la stella. se la stella è nera, la fa accesa e viceversa.
@@ -31,9 +31,9 @@ stelle.forEach(function (stella) {
       const stella = stelle[i]
       console.log(stella)
       if (stella.src.includes("star_dark.svg")) {
-        stella.src = "./assets/img/star.svg"
+        stella.src = "./assets/images/star.svg"
       } else {
-        stella.src = "./assets/img/star_dark.svg"
+        stella.src = "./assets/images/star_dark.svg"
       }
     }
     console.log(e.target.getAttribute("id"))
