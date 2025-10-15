@@ -13,7 +13,7 @@
     <header>
       <div class="header-cont-form">
         <img
-          src="./assets/images/epicode_logo.png"
+          src="./assets/img/epicode_logo.png"
           alt="epicode_logo"
           class="logo"
         />
@@ -26,20 +26,26 @@
     <main>
       <section>
         <div id="graph">
-          <div class="wright-perc"><p>Correct</p></div>
-          <div class="wrong-perc"><p>Wrong</p></div>
+          <div id="wright-perc"><p>Correct</p></div>
+          <div id="wrong-perc"><p>Wrong</p></div>
           <div id="wrapper"> 
             <canvas id="donut" style="width: 100%; max-width: 500px;"></canvas>
             <div id="in-cirlce-text">
-              <h3>Congratulation!<br>You passed the exam.</h3>
-              <p>We'll send you the certificate in few minutes. Check your email(including promotions/spam folder)</p>
+              <h3>
+                <span>Congratulation!</span>
+                <span>You passed the exam.</span>
+              </h3>
+              <p>
+                <span>We'll send you the certificate in few minutes.</span>
+                <span>Check your email(including promotions/spam folder)</span>
+              </p>
             </div>
           </div>
         </div>  
 
     </section>
   </main>
-    <footer><div class="rate-us"><button>RATE US</button></div></footer>
+    <footer><div class="rate-us"><button onclick='submit'><a href="./Index.html">RATE US</a></button></div></footer>
 
     <!--SCRIPTS-->
    
