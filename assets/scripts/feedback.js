@@ -9,9 +9,8 @@ starsClick.addEventListener("mouseover", function () {
 const buttonClick = document.getElementById("buttonMoreInfo");
 buttonClick.addEventListener("mouseover", function () {
   console.log("prova, prova");
-  buttonClick.addEventListener("click", function (e) {
+  buttonClick.addEventListener("click", function () {
     console.log("click andato");
-    e.preventDefault();
   });
 });
 
