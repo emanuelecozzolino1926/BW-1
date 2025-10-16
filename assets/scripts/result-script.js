@@ -53,6 +53,11 @@ const myChart = new Chart(ctx,
   }
 )
 
+setInterval(function() {
+    data.datasets[0].data[1] = 60;
+    data.datasets[0].backgroundColor[1] = "#F7464A";
+ 		myChart.update();
+}, 1000);
 
 
 const percentuali = function () {

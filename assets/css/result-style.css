@@ -109,6 +109,7 @@ p {
 #donut{ 
     display: inline-block;
     position:absolute; 
+    transform: scaleX(-1);
     top: 130px;
 }
 
