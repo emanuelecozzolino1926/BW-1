@@ -7,7 +7,7 @@
     <!--RESET CSS-->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <!--STYLE -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/benchmark.css" />
   </head>
   <body>
     <header>
@@ -18,11 +18,13 @@
           class="logo"
         />
         <div class="timer-cont">
-          <span id="timer"></span>
+          <canvas id="clock"></canvas>
         </div>
       </div>
     </header>
     <div class="quiz"></div>
-    <script src="./assets/scripts/script.js"></script>
+    <div id="question-counter"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.0/chart.umd.min.js"></script>
+    <script src="./assets/scripts/benchmark.js"></script>
   </body>
 </html>
