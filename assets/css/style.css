@@ -1,4 +1,4 @@
-/* GLOBALI */
+/* GLOBALI
 body {
   background-image: url("../img/bg.jpg");
   background-repeat: no-repeat;
@@ -10,7 +10,7 @@ body {
 }
 /* FORM */
 
-.header-cont-form {
+/* .header-cont-form {
   padding: 50px;
   width: 80%;
   margin: auto;
@@ -35,6 +35,7 @@ body {
 }
 
 /* RESULTS*/
+/* 
 h1 {
   font-size: 2em;
 }
@@ -78,7 +79,7 @@ h1 {
   background: none;
   color: white;
   border-color: white;
-}
+} */
 body {
   background-image: url(../images/bg.jpg);
   background-size: cover;
@@ -152,14 +153,13 @@ input {
   border: none;
 }
 
-a {
+/* a {
   text-decoration-line: none;
   color: darkslategrey;
-}
+} */
 
 /* Css Feedback fine  */
 
-=========
 /* GLOBALI */
 body {
   background-image: url("../img/bg.jpg");
@@ -241,4 +241,9 @@ h1 {
   color: white;
   border-color: white;
   box-shadow: 0 0 10px #00f0ff;
+}
+
+a {
+  text-decoration-line: none;
+  color: darkslategrey;
 }
