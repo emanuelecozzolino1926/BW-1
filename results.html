@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Benchmark Page</title>
+    <!--RESET CSS-->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <!--STYLE -->
+    <link rel="stylesheet" href="./assets/css/result-style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-cont-form">
+        <img
+          src="./assets/img/epicode_logo.png"
+          alt="epicode_logo"
+          class="logo"
+        />
+      </div>
+      <div class="results">
+        <h1>Results</h1>
+        <p>The summary of your answers:</p>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div id="graph">
+          <div id="wright-perc"><p>Correct</p></div>
+          <div id="wrong-perc"><p>Wrong</p></div>
+          <div id="wrapper"> 
+            <canvas id="donut" style="width: 100%; max-width: 500px;"></canvas>
+            <div id="in-cirlce-text">
+              <h3>
+                <span>Congratulation!</span>
+                <span>You passed the exam.</span>
+              </h3>
+              <p>
+                <span>We'll send you the certificate in few minutes.</span>
+                <span>Check your email(including promotions/spam folder)</span>
+              </p>
+            </div>
+          </div>
+        </div>  
+
+    </section>
+  </main>
+    <footer><div class="rate-us"><button onclick='submit'><a href="./Index.html">RATE US</a></button></div></footer>
+
+    <!--SCRIPTS-->
+   
+    <!--CHART.JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.0/chart.umd.js" integrity="sha512-D4pL3vNgjkHR/qq+nZywuS6Hg1gwR+UzrdBW6Yg8l26revKyQHMgPq9CLJ2+HHalepS+NuGw1ayCCsGXu9JCXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!--CUSTOM SCRIPT-->
+    <script src="./assets/scripts/result-script.js"></script>
+  </body>
+</html>
