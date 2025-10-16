@@ -28,11 +28,7 @@ h1 {
   font-size: 6rem;
   margin-bottom: 1.5rem;
   font-weight: 700;
-  color: white;
-}
-
-h1 span {
-  color: #eaeaf1;
+  color: rgba(248, 241, 241, 0.868);
 }
 
 h2 {
@@ -65,9 +61,11 @@ ul li strong {
   font-weight: 700;
 }
 
-li span {
-  color: #eaeaf1;
+.text-light {
+  color: #f0f0f2;
+  font-weight: 800;
 }
+
 /* === CHECKBOX === */
 .checkbox {
   display: flex;
