@@ -152,3 +152,8 @@ input {
   box-shadow: 0 0 15px #00ffff;
   border: none;
 }
+
+a {
+  text-decoration-line: none;
+  color: darkslategrey;
+}
