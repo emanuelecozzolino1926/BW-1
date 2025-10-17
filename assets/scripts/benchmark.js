@@ -1,4 +1,4 @@
-//VARIABILI GLOBALI
+// VARIABILI GLOBALI
 let score = 0;
 let questionNumber = 0;
 let time;
@@ -103,10 +103,7 @@ const createChart = () => {
         // Plugin personalizzato per scrivere testo al centro
         id: "centerText",
         afterDraw(chart) {
-          const {
-            ctx,
-            chartArea: { width, height },
-          } = chart;
+          const { ctx, chartArea: { width, height } } = chart;
           ctx.save();
           ctx.fillStyle = "#fff";
           ctx.textAlign = "center";
@@ -153,7 +150,7 @@ const startTimer = () => {
         if (questionNumber < questions.length) {
           selectQuestion();
         } else {
-          //UTILIZZIAMO PARAMS QUERY PER APRIRE UN ALTRA PAGINA CON LE VARIABILI DEL RISULTATO
+          //UITILIZZIAMO PARAMS QUERY PER APRIRE UN ALTRA PAGINA CON LE VARIABILI DEL RISULTATO
           window.location.href = `results.html?score=${score}&total=${questions.length}&wrong=${questions.length - score}`;
         }
       }, 500);
@@ -184,45 +181,37 @@ const selectQuestion = () => {
   const answers = [...current.incorrect_answers, current.correct_answer];
   answers.sort(() => Math.random() - 0.5);
 
-  //CREIAMO I BOTTONI CON LE RISPOSTE
+  //CREIAMO I BOTTINI CON LE RISPOSTE
   answers.forEach((answer) => {
     const btn = document.createElement("button");
     btn.classList.add("btn-Base");
     btn.innerText = answer;
 
-    //AL CLICK DELLA RISPOSTA BLOCCHIAMO IL TIMER
+    //AL CLICK DELLA RISPOSTA
     btn.addEventListener("click", () => {
       clearInterval(time);
 
-      //DOPO IL PRIMO CLICK GLI ALTRI NON SONO VALIDI
+      // BLOCCO SUBITO TUTTI I BOTTONI (NO DOPPIO CLICK)
       const allBtns = quizContainer.querySelectorAll("button");
       allBtns.forEach((b) => {
         b.disabled = true;
       });
 
-      //SE LA RISPOSTA E' GIUSTA
+      //SE LA RISPOSTA È GIUSTA
       if (answer === current.correct_answer) {
         score++;
+        btn.classList.remove("btn-Base");
         btn.classList.add("correct-btn");
-        b.classList.remove("btn-Base");
-
-        //TUTTI GLI ALTRI DIVENTANO ROSSI
-        allBtns.forEach((b) => {
-          if (b !== btn) {
-            b.classList.add("wrong-btn");
-            b.classList.remove("btn-Base");
-          }
-        });
       } else {
-        // RISPOSTA SBAGLIATA
+        btn.classList.remove("btn-Base");
         btn.classList.add("wrong-btn");
-        b.classList.remove("btn-Base");
 
-        // TROVA E COLORA DI VERDE QUELLA GIUSTA
+        //EVIDENZIAMO LA RISPOSTA GIUSTA
         const correctBtn = [...allBtns].find(
           (b) => b.innerText === current.correct_answer
         );
         if (correctBtn) {
+          correctBtn.classList.remove("btn-Base");
           correctBtn.classList.add("correct-btn");
         }
       }
@@ -233,7 +222,7 @@ const selectQuestion = () => {
         if (questionNumber < questions.length) {
           selectQuestion();
         } else {
-          window.location.href = `results.html?score=${score}&total=${questions.length}&wrong=${questions.length - score}`;
+          window.location.href = `/BW-1/results.html?score=${score}&total=${questions.length}&wrong=${questions.length - score}`;
         }
       }, 1000);
     });
