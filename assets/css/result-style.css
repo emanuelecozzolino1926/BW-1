@@ -56,7 +56,6 @@ p {
 /* RESULTS*/
 
 p a {
-    /* font-family: "Inter", sans-serif; */
     font-weight: lighter;
 }
 
@@ -72,10 +71,6 @@ p a {
  font-weight: bold;
  margin-bottom: 0px;
 }
-
-/* h1{
-    font-weight: bolder;
-} */
 
 #wrapper {
     /* position:relative; */
@@ -93,11 +88,16 @@ p a {
 
 #wright-perc, #wrong-perc {
     display: inline-block; 
+    position: relative; 
     width: 30vw;
     min-width: 200px;
-    position: relative; 
     color: white;  
     /* font-weight: bold; */
+}
+
+h2 {
+    font-weight: 400;
+    margin-bottom: 0px;
 }
 
 #wright-perc{
@@ -119,6 +119,7 @@ p a {
 .percentuali{
     font-size: 3rem;
     font-weight: bold;
+    margin: 0.25rem auto;
 }
 
 .rapporti{
@@ -130,7 +131,7 @@ p a {
     /* display: inline-block; */
     position:absolute; 
     transform: rotateY(-0.5turn);
-    top: 360px;
+    top: 380px;
 }
 
 .in-text-passed{
@@ -161,12 +162,14 @@ p a {
     display: block;
 }
 
-.in-circle-text p{
-    margin-top: 2rem;
+.in-text-passed p{
+    margin-top: 2.5rem;
+    font-weight: 200;
 }
 
 .rate-us {
     margin: 2rem, 100%;
+    margin-bottom: 4rem;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -174,19 +177,20 @@ p a {
 }
 
 .rate-us button {
-    padding: 1rem;
-    margin-top: 3rem;
+    padding: 1.5rem 2rem;
     margin-bottom: 4rem;
-    width: 160px;
+    width: 260px;
     margin-left: auto;
     margin-right: auto;
     background: none;
     color: white;
     border-color: white;
+    border-style:ridge;
 }
 
 a {
+    font-size: 1.5rem;
+    font-weight: bold;
     text-decoration-line: none;
-    color: white;
-    font-size: ;
+    color: white; 
 }

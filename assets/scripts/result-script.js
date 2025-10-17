@@ -106,7 +106,7 @@ if(yValues[0] > yValues[1]){
                           </h3>
                           <p>
                             <span>We'll send you the certificate in few minutes.</span>
-                            <span>Check your email(including promotions/spam folder)</span>
+                            <span>Check your email(including promotions / spam folder)</span>
                           </p>`
   insideText.appendChild(parResult)
 } else {
