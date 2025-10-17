@@ -37,7 +37,7 @@ const myChart = new Chart(ctx,
     data: {
       datasets: [{
         borderWidth: 0,
-        backgroundColor:['#00ffff', '#c2128d',], 
+        backgroundColor:['#00ffff', '#d20094',], 
         data: [yValues[0],yValues[1]],
         }
       ]
@@ -95,6 +95,7 @@ const percentuali = function () {
 
 percentuali()
 
+//se le risposte esatte sono maggiori di quelle sbagliate compare un testo diverso all'interno del grafico
 if(yValues[0] > yValues[1]){
   let insideText = document.querySelector('#wrapper')
   let parResult = document.createElement('div')

@@ -26,9 +26,9 @@ body{
 }
 
 .logo {
-    height: 35px;
-    margin-top: 2rem;
-    margin-left: 10vw;
+    height: 2.5rem;
+    margin-top: 4rem;
+    margin-left: 6vw;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -57,6 +57,7 @@ p {
 
 p a {
     font-family: "Inter", sans-serif;
+    font-weight: 100;
 }
 
 .results {
@@ -70,7 +71,7 @@ p a {
     /* position:relative; */
     width:400px;
     height:400px;
-    margin-top: 14rem;
+    margin-top: 12rem;
     margin-left: auto;
     margin-right: auto;
 }
