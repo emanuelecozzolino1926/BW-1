@@ -222,7 +222,7 @@ const selectQuestion = () => {
         if (questionNumber < questions.length) {
           selectQuestion();
         } else {
-          window.location.href = `/BW-1/results.html?score=${score}&total=${questions.length}&wrong=${questions.length - score}`;
+          window.location.href = `results.html?score=${score}&total=${questions.length}&wrong=${questions.length - score}`;
         }
       }, 1000);
     });
