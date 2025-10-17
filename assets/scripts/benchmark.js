@@ -1,4 +1,4 @@
-//VARIABILI GLOBALI
+// VARIABILI GLOBALI
 let score = 0;
 let questionNumber = 0;
 let time;
@@ -49,7 +49,8 @@ const questions = [
     ],
   },
   {
-    question: "What is the code name for the mobile operating system Android 7.0?",
+    question:
+      "What is the code name for the mobile operating system Android 7.0?",
     correct_answer: "Nougat",
     incorrect_answers: ["Ice Cream Sandwich", "Jelly Bean", "Marshmallow"],
   },
@@ -64,7 +65,8 @@ const questions = [
     incorrect_answers: ["True"],
   },
   {
-    question: "Which programming language shares its name with an island in Indonesia?",
+    question:
+      "Which programming language shares its name with an island in Indonesia?",
     correct_answer: "Java",
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
@@ -82,7 +84,7 @@ const createChart = () => {
       datasets: [
         {
           data: [30, 0],
-          backgroundColor: ["#00ffff", "#9a6a9e"],
+          backgroundColor: ["#9a6a9e", "#00ffff"],
           borderWidth: 0,
         },
       ],
@@ -121,7 +123,8 @@ const createChart = () => {
     ],
   });
 };
-//LOGICA TIMER TIMER
+
+//LOGICA TIMER
 const startTimer = () => {
   clearInterval(time);
   seconds = 30;
@@ -130,7 +133,7 @@ const startTimer = () => {
   myChart.data.datasets[0].data = [30, 0];
   myChart.update();
 
-  // TOGLIAMO UNN SECONDO OGNI SECONDO
+  // TOGLIAMO UN SECONDO OGNI SECONDO
   time = setInterval(() => {
     seconds--;
 
@@ -162,7 +165,7 @@ const selectQuestion = () => {
 
   const current = questions[questionNumber];
 
-  //INCREMENTIAMO IL NUMERO DI DOMANDE NEL CONTATORE SOTTTO
+  //INCREMENTIAMO IL NUMERO DI DOMANDE NEL CONTATORE SOTTO
   const counter = document.getElementById("question-counter");
   if (counter) {
     counter.innerHTML = `QUESTION ${questionNumber + 1} <span>/ ${questions.length}</span>`;
@@ -178,28 +181,33 @@ const selectQuestion = () => {
   const answers = [...current.incorrect_answers, current.correct_answer];
   answers.sort(() => Math.random() - 0.5);
 
-  //CREIAMO I BOTTINNI CON LE RISPOSTE
+  //CREIAMO I BOTTINI CON LE RISPOSTE
   answers.forEach((answer) => {
     const btn = document.createElement("button");
     btn.classList.add("btn-Base");
     btn.innerText = answer;
 
-    //AL CLICK DELLA RISPOSTA BLOCCHIAMO IL TIMERE
+    //AL CLICK DELLA RISPOSTA
     btn.addEventListener("click", () => {
       clearInterval(time);
 
-      //SE LA RISPOSTA E GIUSTA INCREMENTIAMO SCORE
+      // BLOCCO SUBITO TUTTI I BOTTONI (NO DOPPIO CLICK)
+      const allBtns = quizContainer.querySelectorAll("button");
+      allBtns.forEach((b) => {
+        b.disabled = true;
+      });
+
+      //SE LA RISPOSTA È GIUSTA
       if (answer === current.correct_answer) {
         score++;
         btn.classList.remove("btn-Base");
         btn.classList.add("correct-btn");
       } else {
-        // ALTRIMENTI NON LO TOCCHIAMO
         btn.classList.remove("btn-Base");
         btn.classList.add("wrong-btn");
 
-        //EVIDENZIAMO RISPOSTA GIUSTA NON CLICCATA
-        const correctBtn = [...quizContainer.querySelectorAll("button")].find(
+        //EVIDENZIAMO LA RISPOSTA GIUSTA
+        const correctBtn = [...allBtns].find(
           (b) => b.innerText === current.correct_answer
         );
         if (correctBtn) {
@@ -214,7 +222,7 @@ const selectQuestion = () => {
         if (questionNumber < questions.length) {
           selectQuestion();
         } else {
-          window.location.href = `/BW-1/results.html?score=${score}&total=${questions.length}&wrong=${questions.length - score}`;
+          window.location.href = `results.html?score=${score}&total=${questions.length}&wrong=${questions.length - score}`;
         }
       }, 1000);
     });
@@ -224,9 +232,9 @@ const selectQuestion = () => {
 
   startTimer();
 };
+
 //AVVIO
 window.onload = () => {
   createChart();
   selectQuestion();
 };
-
