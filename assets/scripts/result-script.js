@@ -1,35 +1,14 @@
-
-const ctx = document.getElementById('donut') 
-
-/*
-const shadowPlugin = {
-  id: 'shadowPlugin',
-  beforeDraw: (chart) => {
-    const ctx = chart.ctx;
-    ctx.save(); // Save the current canvas state
-    ctx.shadowColor = 'rgba(0, 0, 0, 0.3)'; // Set shadow color and opacity
-    ctx.shadowBlur = 10; // Set shadow blur radius
-    ctx.shadowOffsetX = 5; // Set horizontal shadow offset
-    ctx.shadowOffsetY = 5; // Set vertical shadow offset
-  },
-  afterDraw: (chart) => {
-    const ctx = chart.ctx;
-    ctx.restore(); // Restore the canvas state
-  }
-};
-*/
-
-//recupero i valori dei risultati dall'URL
+//recupero i valori dei risultati salvati nell'URL
 let params = new URLSearchParams(document.location.search);
 let score = parseInt(params.get("score"), 10);
 let total = parseInt(params.get("total"), 10);
 let wrong = parseInt(params.get("wrong"), 10); 
 
-console.log(`Lo score è ${score}, il totale è ${total}, le sbagliate sono ${wrong}`)
+//salvo i valori in un array
+const yValues = [score, wrong, total]
 
-let yValues = [score, wrong, total]
+const ctx = document.getElementById('donut') 
 
-console.log(yValues)
 //Disegno del grafico a ciambella
 const myChart = new Chart(ctx,
   { 
@@ -59,14 +38,6 @@ const myChart = new Chart(ctx,
 },
 }
 )
-
-/*
-setInterval(function() {
-    data.datasets[0].data[1] = 60;
-    data.datasets[0].backgroundColor[1] = "#F7464A";
- 		myChart.update();
-}, 1000);
-*/
 
 //restituisco le percentuali ed i risultati
 const percentuali = function () {
