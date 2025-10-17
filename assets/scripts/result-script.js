@@ -27,7 +27,7 @@ let wrong = parseInt(params.get("wrong"), 10);
 
 console.log(`Lo score è ${score}, il totale è ${total}, le sbagliate sono ${wrong}`)
 
-let yValues = [score, wrong, (score + wrong)]
+let yValues = [score, wrong, total]
 
 console.log(yValues)
 //Disegno del grafico a ciambella
@@ -99,7 +99,7 @@ percentuali()
 if(yValues[0] > yValues[1]){
   let insideText = document.querySelector('#wrapper')
   let parResult = document.createElement('div')
-  parResult.classList.add('in-circle-text')
+  parResult.classList.add('in-text-passed')
   parResult.innerHTML = `<h3>
                             <span>Congratulation!</span>
                             <span>You passed the exam.</span>
@@ -112,7 +112,7 @@ if(yValues[0] > yValues[1]){
 } else {
   let insideText = document.querySelector('#wrapper')
   let parResult = document.createElement('div')
-  parResult.classList.add('in-circle-text')
+  parResult.classList.add('in-text-not-passed')
   parResult.innerHTML = `<h3>
                             <span>Sorry!</span>
                             <span>You didn't pass the exam.</span>
