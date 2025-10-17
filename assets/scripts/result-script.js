@@ -114,6 +114,7 @@ if(yValues[0] > yValues[1]){
   parResult.classList.add('in-circle-text')
   parResult.innerHTML = `<h3>
                             <span>Sorry!</span>
-                            <span>You didn't pass the exam.</span>`
+                            <span>You didn't pass the exam.</span>
+                          </h3>`
   insideText.appendChild(parResult)
   }
