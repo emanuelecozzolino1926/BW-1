@@ -94,3 +94,26 @@ const percentuali = function () {
 }
 
 percentuali()
+
+if(yValues[0] > yValues[1]){
+  let insideText = document.querySelector('#wrapper')
+  let parResult = document.createElement('div')
+  parResult.classList.add('in-circle-text')
+  parResult.innerHTML = `<h3>
+                            <span>Congratulation!</span>
+                            <span>You passed the exam.</span>
+                          </h3>
+                          <p>
+                            <span>We'll send you the certificate in few minutes.</span>
+                            <span>Check your email(including promotions/spam folder)</span>
+                          </p>`
+  insideText.appendChild(parResult)
+} else {
+  let insideText = document.querySelector('#wrapper')
+  let parResult = document.createElement('div')
+  parResult.classList.add('in-circle-text')
+  parResult.innerHTML = `<h3>
+                            <span>Sorry!</span>
+                            <span>You didn't pass the exam.</span>`
+  insideText.appendChild(parResult)
+  }

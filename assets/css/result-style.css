@@ -48,11 +48,21 @@ p {
 .results {
     text-align: center;
     color:white;
-    margin-bottom: 1rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+#wrapper {
+    /* position:relative; */
+    width:400px;
+    height:400px;
+    margin-top: 12rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #graph {
-    margin-top: 10rem;
+    margin-top: 1rem;
     width:100%;
 }
 
@@ -91,36 +101,30 @@ p {
     font-size: 1.25rem;
 }
 
-#in-cirlce-text{
-    color: white;
-    text-align: center;
-    width: 30vw;
-    max-width: 280px;
-    position: relative;
-    bottom: 2rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#in-circle-text p{
-    margin-top: 1rem;
-}
-
-#wrapper {
-    /* position:relative; */
-    width:400px;
-    height:400px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0, 0, 10px solid black;
-}
-
-
 #donut{ 
     display: inline-block;
     position:absolute; 
     transform: rotateY(-0.5turn);
-    top: 130px;
+    top: 240px;
+}
+
+.in-circle-text{
+    color: white;
+    text-align: center;
+    width: 35vw;
+    max-width: 280px;
+    position: relative;
+    bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.in-circle-text span{
+    display: block;
+}
+
+.in-circle-text p{
+    margin-top: 2rem;
 }
 
 .rate-us {
