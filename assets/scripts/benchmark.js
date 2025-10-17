@@ -231,11 +231,7 @@ const selectQuestion = () => {
         if (questionNumber < questions.length) {
           selectQuestion();
         } else {
-<<<<<<< HEAD
-          window.location.href = `./results.html?score=${score}&total=${questions.length}&wrong=${questions.length - score}`;
-=======
           window.location.href = `results.html?score=${score}&total=${questions.length}&wrong=${questions.length - score}`;
->>>>>>> emanuele
         }
       }, 1000);
     });
