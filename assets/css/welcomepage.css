@@ -1,6 +1,7 @@
 body {
   font-family: "Inter", sans-serif;
-  background: linear-gradient(135deg, #0b0b3b, #5b0a7e);
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
   color: white;
   height: 100vh;
   display: flex;
@@ -32,7 +33,7 @@ h1 {
 }
 
 h2 {
-  color: #ff007a;
+  color: #c2128d;
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 1rem;
