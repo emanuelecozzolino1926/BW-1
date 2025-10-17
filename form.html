@@ -8,6 +8,20 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <!--STYLE -->
     <link rel="stylesheet" href="./assets/css/benchmark.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- TITLE FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- DESC FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -22,8 +36,17 @@
         </div>
       </div>
     </header>
-    <div class="quiz"></div>
+    <!-- FORM SELEZIONE -->
+    <div id="setting-cont">
+      <h2 class="setting-title title-font">Scegli la difficoltà</h2>
+      <button id="easyBtn">Facile</button>
+      <button id="mediumBtn">Medio</button>
+      <button id="hardBtn">Difficile</button>
+    </div>
+    <!-- QUIZ -->
+    <div class="quiz" style="display: none"></div>
     <div id="question-counter"></div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.0/chart.umd.min.js"></script>
     <script src="./assets/scripts/benchmark.js"></script>
   </body>
