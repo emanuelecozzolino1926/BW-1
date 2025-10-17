@@ -198,23 +198,25 @@ const selectQuestion = () => {
       const allBtns = quizContainer.querySelectorAll("button");
       allBtns.forEach((b) => {
         b.disabled = true;
-        b.classList.remove("btn-Base");
       });
 
       //SE LA RISPOSTA E' GIUSTA
       if (answer === current.correct_answer) {
         score++;
         btn.classList.add("correct-btn");
+        b.classList.remove("btn-Base");
 
         //TUTTI GLI ALTRI DIVENTANO ROSSI
         allBtns.forEach((b) => {
           if (b !== btn) {
             b.classList.add("wrong-btn");
+            b.classList.remove("btn-Base");
           }
         });
       } else {
         // RISPOSTA SBAGLIATA
         btn.classList.add("wrong-btn");
+        b.classList.remove("btn-Base");
 
         // TROVA E COLORA DI VERDE QUELLA GIUSTA
         const correctBtn = [...allBtns].find(
